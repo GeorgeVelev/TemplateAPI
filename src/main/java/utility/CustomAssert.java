@@ -28,4 +28,15 @@ public class CustomAssert extends SoftAssert {
         customAssert.assertEquals(actual, expected);
         customAssert.assertAll();
     }
+
+    /**
+     * Used to fail a test when an exception is thrown
+     *
+     * @param message information about the reason for the fail
+     */
+    public static void failTest(String message) {
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.fail(message);
+        customAssert.assertAll();
+    }
 }
